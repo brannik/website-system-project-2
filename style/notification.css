@@ -1,0 +1,22 @@
+table,
+tr {
+    width: 100%;
+    text-align: center;
+    height: 50px;
+}
+
+#time {
+    width: 80px;
+}
+
+#button {
+    width: 120px;
+}
+
+#request {
+    background-color: yellow;
+}
+
+#message {
+    background-color: rebeccapurple;
+}

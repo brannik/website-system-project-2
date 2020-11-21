@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="../style/extra.css">
+    <script>
+        function go(loc) {
+            document.getElementById('extraContent').src = "extra.php?action=" + loc;
+        }
+    </script>
+</head>
+
+<body>
+    <div id="content">
+        <h1>This is extra page</h1>
+        <div id="extraMenu">
+            <ul>
+                <li><input type="button" value="INFO" onclick="go('info')"></input>
+                </li>
+                <li><input type="button" value="ADD" onclick="go('add')"></input>
+                </li>
+                <li><input type="button" value="REMOVE" onclick="go('delete')"></input>
+                </li>
+            </ul>
+        </div>
+        <iframe src="extra.php?action=info" id="extraContent"></iframe>
+    </div>
+</body>
+
+</html>

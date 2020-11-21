@@ -1,0 +1,72 @@
+table,
+td {
+    border: 1px solid black;
+}
+
+td {
+    width: 300px;
+    height: 120px;
+}
+
+table {
+    width: 100%;
+    background-color: lightgray;
+    table-layout: fixed;
+}
+
+#header {
+    height: 50px !important;
+    width: 100%;
+    text-align: center;
+    background-color: darkgray;
+}
+
+#month {
+    font-size: larger;
+    text-align: center;
+    height: 30px;
+    background-color: grey;
+}
+
+#date {
+    height: 40px;
+}
+
+tr {
+    background-color: lightgray;
+}
+
+#buttons {
+    width: 100%;
+    height: 100%;
+}
+
+.sunday {
+    background-color: blueviolet;
+    color: aliceblue;
+    height: fit-content;
+    font-size: 12px;
+    word-wrap: break-word;
+    display: block;
+    text-align: center;
+}
+
+.secondShift {
+    background-color: red;
+    color: aliceblue;
+    height: fit-content;
+    font-size: 12px;
+    display: block;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.restDay {
+    background-color: yellow;
+    color: black;
+    height: fit-content;
+    font-size: 12px;
+    word-wrap: break-word;
+    display: block;
+    text-align: center;
+}
