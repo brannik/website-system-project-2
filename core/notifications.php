@@ -51,16 +51,16 @@ function send(){
         echo "<tr id='request'>
             <td id='time'><text>Timestamp</text></td>
             <td id='context' colspan='2'><text>From - @name request for (shift[t-0]/sunday[t-1]) - notification type 0 | request type = 0 (not accepted)</text></td>
-            <td id='button'><a href='notifications.php?action=0&id=" . $i . "'><base target='mainFr'>ACCEPT</a></td>
-            <td id='button'><a href='notifications.php?action=1&id=" . $i ."'><base target='mainFr'>DECLINE</a></td>
+            <td id='button'><a href='notifications.php?action=0&id=" . $i . "'><base target='mainFr'>ПРИЕМИ</a></td>
+            <td id='button'><a href='notifications.php?action=1&id=" . $i ."'><base target='mainFr'>ОТКАЖИ</a></td>
             </tr>";
         }else{ // if notification type = 1 aka message
             echo "<tr id='message'>
             <td id='time'><text>Timestamp</text></td>
             <td id='context'><p style='text-align:left;'>&nbsp;&nbsp;<span class='w3-tag w3-blue'>New!</span>&nbsp;&nbsp;<text>From - @name Message content - notification type 1</text></p></td>
-            <td id='button'><a href='notifications.php?action=2&id=" . $i . "'><base target='mainFr'>SEEN</a></td>
-            <td id='button'><a href='notifications.php?action=3&id=" . $i ."&target=" . intval($i+1) . "&span=" . intval($i+2) . "'><base target='mainFr'>REPLY</a></td>
-            <td id='button'><a href='notifications.php?action=4&id=" . $i ."'><base target='mainFr'>DELETE</a></td>
+            <td id='button'><a href='notifications.php?action=2&id=" . $i . "'><base target='mainFr'>ПРОЧЕТЕНО</a></td>
+            <td id='button'><a href='notifications.php?action=3&id=" . $i ."&target=" . intval($i+1) . "&span=" . intval($i+2) . "'><base target='mainFr'>ОТГОВОР</a></td>
+            <td id='button'><a href='notifications.php?action=4&id=" . $i ."'><base target='mainFr'>ИЗТРИИ</a></td>
             </tr><tr id='" . intval($i+1) . "' style='height:0px;'><td colspan='5'><span id='" . intval($i+2) . "'></span></td></tr>";
         }
     }

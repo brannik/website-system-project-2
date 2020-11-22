@@ -8,7 +8,7 @@ ul {
 li {
     width: 100%;
     text-decoration: none;
-    height: 100px;
+    height: 50px;
 }
 
 #content {
@@ -18,16 +18,16 @@ li {
 
 #extraMenu {
     width: 100%;
-    height: 10%;
+    height: 20%;
 }
 
 #extraContent {
     width: 100%;
-    height: 90%;
+    height: 80%;
 }
 
 input {
     width: 100%;
-    height: 100px;
+    height: 50px;
     font-size: 25px;
 }
