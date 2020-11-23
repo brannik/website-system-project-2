@@ -3,12 +3,23 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+<<<<<<< HEAD
   width: 100%;
   background-color: #f1f1f1;
+=======
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+  margin: 0px;
+>>>>>>> main
 }
 
 li a {
   display: block;
+<<<<<<< HEAD
   color: #000;
   padding: 8px 16px;
   text-decoration: none;
@@ -18,6 +29,18 @@ li a {
 li a:hover {
   background-color: #555;
   color: white;
+=======
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  margin: 0px;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+>>>>>>> main
 }
 </style>
 <?php

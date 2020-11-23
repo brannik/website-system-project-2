@@ -1,8 +1,33 @@
 <script type="text/javascript">
 function execute_date(dt,hiden){
     alert("Function is working!!! " + dt);    
+<<<<<<< HEAD
 }
 </script>
+=======
+    var t = document.getElementById('defHidden');
+    if (t.style.display === "none") {
+        t.style.display = "block";
+        document.getElementById('frame').src = "date_process.php?date=" + dt;
+    } else {
+        t.style.display = "none";
+    }
+
+}
+</script>
+<style>
+#defHidden{
+    display: none;
+    width: 100%;
+    height: 600px;
+    background-color: yellow;
+}
+iframe{
+    width: 100%;
+    height: 100%;
+}
+</style>
+>>>>>>> main
 <?php
  require("includes.php");
  require(ROOT . "session.php");
@@ -50,7 +75,11 @@ if($conn){
 $elements = count($ALL_EVENTS);
 echo "<table>";
 echo "<tr style='height: 50px;'><td colspan='7' id='month'>" . $MONTH_NAME . "</td></tr>";
+<<<<<<< HEAD
 echo "<tr id='header' style='height: 50px;'><td>PON</td><td>VT</td><td>SR</td><td>CHET</td><td>PET</td><td>SUB</td><td>NED</td></tr>";
+=======
+echo "<tr id='header' style='height: 50px;'><td>ПОНЕДЕЛНИК</td><td>ВТОРНИК</td><td>СРЯДА</td><td>ЧЕТВЪРТЪК</td><td>ПЕТЪК</td><td>СЪБОТА</td><td>НЕДЕЛЯ</td></tr>";
+>>>>>>> main
 // if event is mine <i class='glyphicon glyphicon-user'></i> - icon
 // if event is secondShift - span class 'secondShift' type 0
 // if event is sunday - span class 'sunday' type 1
@@ -65,15 +94,22 @@ for($i=1;$i<7;$i++){ // build 5 rows
                 echo "<td></td>";
             }else{
                 if($date == $CURRENT_DATE){
+<<<<<<< HEAD
                     echo "<td><div id='buttons' onclick='execute_date(" . $date . ",". $i .")'><div id='content'><span class='w3-tag w3-large w3-blue'>" . $date . "</span>";
                 }else{
                     echo "<td><div id='buttons' onclick='execute_date(" . $date . ",". $i .")'><div id='content'><span class='w3-tag w3-large w3-green'>" . $date . "</span>";
+=======
+                    echo "<td><div id='buttons' onclick='execute_date(" . $date . ",". $y .")'><div id='content'><span class='w3-tag w3-large w3-blue'>" . $date . "</span>";
+                }else{
+                    echo "<td><div id='buttons' onclick='execute_date(" . $date . ",". $y .")'><div id='content'><span class='w3-tag w3-large w3-green'>" . $date . "</span>";
+>>>>>>> main
                 }
                 
                 for($it=0;$it<$elements;$it++){
                     if($ALL_EVENTS[$it][4] == $date){ // if is current date on counter
                         if($ALL_EVENTS[$it][1] == 0){ // if its type 0
                             echo "<span class='secondShift'>";
+<<<<<<< HEAD
                             $msg = "&nbsp;&nbsp;My second shift";
                             $mmsg = "&nbsp;&nbsp;second shift";
                         }elseif($ALL_EVENTS[$it][1] == 1){ // if its type 1
@@ -84,6 +120,18 @@ for($i=1;$i<7;$i++){ // build 5 rows
                             echo "<span class='restDay'>";
                             $msg = "&nbsp;&nbsp;My resting day";
                             $mmsg = "&nbsp;&nbsp;resting day";
+=======
+                            $msg = "&nbsp;&nbsp;Моя втора смяна";
+                            $mmsg = "&nbsp;&nbsp;Втора смяна на&nbsp;";
+                        }elseif($ALL_EVENTS[$it][1] == 1){ // if its type 1
+                            echo "<span class='sunday'>";
+                            $msg = "&nbsp;&nbsp;Моя неделя";
+                            $mmsg = "&nbsp;&nbsp;Неделя на&nbsp;";
+                        }elseif($ALL_EVENTS[$it][1] == 2){ // if its type 2
+                            echo "<span class='restDay'>";
+                            $msg = "&nbsp;&nbsp;мой почивен ден";
+                            $mmsg = "&nbsp;&nbsp;Почивен ден на&nbsp;";
+>>>>>>> main
                         }
 
                         if($ALL_EVENTS[$it][2] == $ACC_ID){ // if is my event
@@ -107,14 +155,21 @@ for($i=1;$i<7;$i++){ // build 5 rows
         }else{
             if($date <= $days_count){
                 if($date == $CURRENT_DATE){
+<<<<<<< HEAD
                     echo "<td><div id='buttons' onclick='execute_date(" . $date . ",". $i .")'><div id='content'><span class='w3-tag w3-large w3-blue'>" . $date . "</span>";
                 }else{
                     echo "<td><div id='buttons' onclick='execute_date(" . $date . ",". $i .")'><div id='content'><span class='w3-tag w3-large w3-green'>" . $date . "</span>";
+=======
+                    echo "<td><div id='buttons' onclick='execute_date(" . $date . ",". $y .")'><div id='content'><span class='w3-tag w3-large w3-blue'>" . $date . "</span>";
+                }else{
+                    echo "<td><div id='buttons' onclick='execute_date(" . $date . ",". $y .")'><div id='content'><span class='w3-tag w3-large w3-green'>" . $date . "</span>";
+>>>>>>> main
                 }
                 for($it=0;$it<$elements;$it++){
                     if($ALL_EVENTS[$it][4] == $date){ // if is current date on counter
                         if($ALL_EVENTS[$it][1] == 0){ // if its type 0
                             echo "<span class='secondShift'>";
+<<<<<<< HEAD
                             $msg = "&nbsp;&nbsp;My second shift";
                             $mmsg = "&nbsp;&nbsp;second shift";
                         }elseif($ALL_EVENTS[$it][1] == 1){ // if its type 1
@@ -125,6 +180,18 @@ for($i=1;$i<7;$i++){ // build 5 rows
                             echo "<span class='restDay'>";
                             $msg = "&nbsp;&nbsp;My resting day";
                             $mmsg = "&nbsp;&nbsp;resting day";
+=======
+                            $msg = "&nbsp;&nbsp;Моя втора смяна";
+                            $mmsg = "&nbsp;&nbsp;Втора смяна на&nbsp;";
+                        }elseif($ALL_EVENTS[$it][1] == 1){ // if its type 1
+                            echo "<span class='sunday'>";
+                            $msg = "&nbsp;&nbsp;Моя неделя";
+                            $mmsg = "&nbsp;&nbsp;Неделя на&nbsp;";
+                        }elseif($ALL_EVENTS[$it][1] == 2){ // if its type 2
+                            echo "<span class='restDay'>";
+                            $msg = "&nbsp;&nbsp;Мой почивен ден";
+                            $mmsg = "&nbsp;&nbsp;Почивен ден на&nbsp;";
+>>>>>>> main
                         }
 
                         if($ALL_EVENTS[$it][2] == $ACC_ID){ // if is my event
@@ -148,8 +215,16 @@ for($i=1;$i<7;$i++){ // build 5 rows
                 echo "<td></td>";
             }
         }
+<<<<<<< HEAD
+=======
+        
+>>>>>>> main
     }
     echo "</tr>";
 }
 echo "</table>";
+<<<<<<< HEAD
+=======
+echo "<span id='defHidden'><iframe id='frame'></iframe></span>";
+>>>>>>> main
 ?>
